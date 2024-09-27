@@ -6,6 +6,7 @@ body {
     width: 50%;
     margin: 0 auto;
     font-family: Inter, sans-serif;
+    background-color: #282d35;
 }
 
 nav {
@@ -39,4 +40,33 @@ nav {
 .nav--icon {
     height: 30px;
     margin-right: 10px;
+}
+
+main {
+    padding: 27px;
+    color: white;
+    background-image: url(logo512.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 75%;
+}
+
+.main--title {
+    margin: 0;
+    font-size: 39px;
+}
+
+.main--facts {
+    margin-top: 46px;
+    letter-spacing: 0.05em;
+    line-height: 47px;
+}
+
+.main--facts > li {
+    padding-block: 10px;
+}
+
+.main--facts > li::marker {
+    font-size: 1.4rem;
+    color: #61dafb;
 }
