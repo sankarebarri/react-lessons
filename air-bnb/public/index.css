@@ -42,3 +42,28 @@ section {
 .hero--text {
     margin-top: 0;
 }
+
+.card {
+    width: 175px;
+}
+
+.gray {
+    color: gray;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.card--image {
+    width: 100%;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+
+.card--star {
+    height: 30px;
+}
