@@ -3,11 +3,7 @@ const Card = (props) => {
     <div className="card">
       <img src={`images/${props.img}`} className="card--image" />
       <div className="card--stats">
-        <img
-          src={`images/${props.star}`}
-          alt="star-image"
-          className="card--star"
-        />
+        <img src="images/star.jpg" alt="star-image" className="card--star" />
         <span>5.0</span>
         <span className="gray">({props.rating}) .</span>
         <span className="gray">{props.country}</span>
