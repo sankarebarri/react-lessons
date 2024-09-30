@@ -16,6 +16,7 @@ nav {
 
 .nav--logo {
     height: 60px;
+    width: 200px;
     display: flex;
     padding: 5px;
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
@@ -45,10 +46,15 @@ section {
 
 .card {
     width: 175px;
+    font-size: 15px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .gray {
-    color: gray;
+    color: gray
 }
 
 .bold {
@@ -64,6 +70,22 @@ section {
     align-items: center;
 }
 
+
 .card--star {
     height: 30px;
+}
+
+.cards--list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
