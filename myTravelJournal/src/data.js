@@ -1,0 +1,32 @@
+export default [
+  {
+    id: 1,
+    title: "Title 1",
+    location: "Location 1",
+    googleMapsUrl: "random.url.1",
+    startDate: "27 Jan, 2021",
+    endDate: " 24 Jan 2024",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
+    image: "boy.jpg",
+  },
+  {
+    id: 2,
+    title: "Title 2",
+    location: "Location 2",
+    googleMapsUrl: "random.url.2",
+    startDate: "27 Apr, 2021",
+    endDate: " 24 Apr 2024",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
+    image: "man.jpg",
+  },
+  {
+    id: 3,
+    title: "Title 3",
+    location: "Location 3",
+    googleMapsUrl: "random.url.3",
+    startDate: "27 Oct, 2021",
+    endDate: " 24 Oct 2024",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
+    image: "old.jpg",
+  },
+];
