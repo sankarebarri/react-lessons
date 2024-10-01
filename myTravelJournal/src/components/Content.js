@@ -1,9 +1,16 @@
 const Content = (props) => {
   //   console.log(props);
-
+  let means;
+  if (props.means === 1) {
+    means = "FLIGHT";
+  } else if (props.means === 2) {
+    means = "TRAIN";
+  } else {
+    means = "LAND";
+  }
   return (
     <div className="card">
-      <div className="card--badge">BY FLIGHT</div>
+      {means && <div className="card--badge">{means}</div>}
       <img src={`images/${props.image}`} className="card--image" />
       <div>
         <div className="card--heading">
