@@ -73,6 +73,18 @@ const Meme = () => {
   //   });
   // }
 
+  console.log(memeImage);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setMemeImage((prevMemeImage) => {
+      return {
+        ...prevMemeImage,
+        [name]: value,
+      };
+    });
+  };
+
   const updateImage = () => {
     const memesLength = allmemeImages.data.memes.length;
     const randomIndex = Math.floor(Math.random() * memesLength);
@@ -83,16 +95,35 @@ const Meme = () => {
       randomImage: folder,
     }));
   };
+
   return (
     <main>
       <div className="form">
-        <input type="text" placeholder="Top text" className="form--inputs" />
-        <input type="text" placeholder="Bottom text" className="form--inputs" />
+        <input
+          type="text"
+          name="topText"
+          value={memeImage.topText}
+          placeholder="Top text"
+          onChange={handleChange}
+          className="form--inputs"
+        />
+        <input
+          type="text"
+          name="bottomText"
+          value={memeImage.bottomText}
+          placeholder="Bottom text"
+          onChange={handleChange}
+          className="form--inputs"
+        />
         <button onClick={updateImage} className="form--button">
           Get a new meme image
         </button>
       </div>
-      <img src={`images/${memeImage.randomImage}`} className="meme--image" />
+      <div className="image--card">
+        <img src={`images/${memeImage.randomImage}`} className="meme--image" />
+        <p className="image--top-text">{memeImage.topText}</p>
+        <p className="image--bottom-text">{memeImage.bottomText}</p>
+      </div>
     </main>
   );
 };
