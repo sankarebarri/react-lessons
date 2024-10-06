@@ -1,3 +1,4 @@
+import FormsAssignment from "./components/FormsAssignment";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
 import data from "./memesData";
@@ -9,6 +10,7 @@ const App = () => {
     <div>
       <Header />
       <Meme />
+      <FormsAssignment />
     </div>
   );
 };

@@ -13,7 +13,6 @@ const Forms = () => {
 
   const handleChange = (event) => {
     // console.log(event.target.checked);
-
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
       return {
