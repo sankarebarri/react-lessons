@@ -1,5 +1,5 @@
 import React from "react";
-import memesData from "../memesData";
+// import memesData from "../memesData";
 const Meme = () => {
   const [memeImage, setMemeImage] = React.useState({
     topText: "",
@@ -7,8 +7,14 @@ const Meme = () => {
     randomImage: "boy.jpg",
   });
 
-  const [allmemeImages, setAllmemeImages] = React.useState(memesData);
+  // const [allmemeImages, setAllmemeImages] = React.useState(memesData);
+  const [allmemeImages, setAllmemeImages] = React.useState([]);
 
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then((data) => setAllmemeImages(data.data.memes));
+  }, []);
   /* LOG RANDOM DATA */
   // const randomId = () => {
   //   const memesLength = memesData.data.memes.length;
@@ -73,7 +79,7 @@ const Meme = () => {
   //   });
   // }
 
-  console.log(memeImage);
+  // console.log(memeImage);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -86,13 +92,17 @@ const Meme = () => {
   };
 
   const updateImage = () => {
-    const memesLength = allmemeImages.data.memes.length;
+    // const memesLength = allmemeImages.data.memes.length;
+    const memesLength = allmemeImages.length;
     const randomIndex = Math.floor(Math.random() * memesLength);
-    const randomData = memesData.data.memes[randomIndex];
-    const folder = randomData.folder;
+    // const randomData = allmemeImages.data.memes[randomIndex];
+    const randomData = allmemeImages[randomIndex];
+    // console.log(randomData.url);
+
+    const url = randomData.url;
     setMemeImage((prevMemeImage) => ({
       ...prevMemeImage,
-      randomImage: folder,
+      randomImage: url,
     }));
   };
 
